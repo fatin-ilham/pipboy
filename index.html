@@ -2,35 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fallout Resume Generator</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Pip-Boy Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'PipBoy';
+      src: url('./Pip-Boy.otf') format('opentype');
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>🟢 Vault-Tec Résumé Terminal</h1>
-
-    <form id="resume-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="title">Title:</label>
-      <input type="text" id="title" required>
-
-      <label for="skills">Skills:</label>
-      <textarea id="skills" rows="3" required></textarea>
-
-      <label for="experience">Experience:</label>
-      <textarea id="experience" rows="4" required></textarea>
-
-      <label for="education">Education:</label>
-      <textarea id="education" rows="3" required></textarea>
-
+    <h1>Pip-Boy Resume Generator</h1>
+    <form id="resumeForm">
+      <label>Name: <input type="text" name="name" required></label>
+      <label>Email: <input type="email" name="email" required></label>
+      <label>Phone: <input type="text" name="phone" required></label>
+      <label>Summary: <textarea name="summary" rows="4" required></textarea></label>
+      <label>Skills (comma separated): <input type="text" name="skills" required></label>
+      <label>Experience: <textarea name="experience" rows="4" required></textarea></label>
+      <label>Education: <textarea name="education" rows="3" required></textarea></label>
       <button type="submit">Generate Resume</button>
     </form>
 
-    <div id="resume-display" class="resume-output" style="display: none;"></div>
+    <div id="output" style="display: none;">
+      <h2>Your Pip-Boy Resume</h2>
+      <div id="resumeDisplay"></div>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
