@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Fallout Resume Generator</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preload" href="assets/fallout-font.ttf" as="font" type="font/ttf" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Pip-Boy Resume Generator</h1>
-    <form id="resumeForm">
-      <input type="text" id="name" placeholder="Name" required/>
-      <input type="text" id="title" placeholder="Title (e.g., Wasteland Engineer)" required/>
-      <input type="text" id="location" placeholder="Vault/Settlement" required/>
-      <textarea id="summary" placeholder="Brief Summary" required></textarea>
-      <textarea id="skills" placeholder="Skills (comma-separated)" required></textarea>
-      <textarea id="experience" placeholder="Experience (one per line)" required></textarea>
+    <h1>🟢 Vault-Tec Résumé Terminal</h1>
+
+    <form id="resume-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="title">Title:</label>
+      <input type="text" id="title" required>
+
+      <label for="skills">Skills:</label>
+      <textarea id="skills" rows="3" required></textarea>
+
+      <label for="experience">Experience:</label>
+      <textarea id="experience" rows="4" required></textarea>
+
+      <label for="education">Education:</label>
+      <textarea id="education" rows="3" required></textarea>
+
       <button type="submit">Generate Resume</button>
     </form>
 
-    <div id="outputSection" class="hidden">
-      <div id="resumeDisplay" class="pipboy-screen">
-        <h2 id="outName"></h2>
-        <p id="outTitle"></p>
-        <p id="outLocation"></p>
-        <hr />
-        <h3>Summary</h3>
-        <p id="outSummary"></p>
-        <h3>Skills</h3>
-        <ul id="outSkills"></ul>
-        <h3>Experience</h3>
-        <ul id="outExperience"></ul>
-      </div>
-      <p class="note">Right-click the resume and open it in a new tab to save as image!</p>
-    </div>
+    <div id="resume-display" class="resume-output" style="display: none;"></div>
   </div>
 
   <script src="script.js"></script>
