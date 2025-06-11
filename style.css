@@ -1,70 +1,64 @@
 @font-face {
-  font-family: 'FalloutFont';
-  src: url('assets/fallout-font.ttf') format('truetype');
+  font-family: 'Pipboy';
+  src: url('Pipboy.otf') format('opentype');
 }
 
 body {
+  font-family: 'Pipboy', monospace;
+  background-color: #0a0a0a;
+  color: #00ff00;
   margin: 0;
-  font-family: 'FalloutFont', monospace;
-  background: #1c1c1c url('assets/pipboy-bg.jpg') center center/cover no-repeat;
-  color: #00FF00;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 2rem;
+  padding: 0;
+  text-shadow: 0 0 5px #00ff00;
 }
 
 .container {
-  background-color: #000;
-  border: 3px solid #00FF00;
-  padding: 1.5rem;
   max-width: 800px;
-  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #00ff00;
+  background-color: #0c0c0c;
 }
 
-input, textarea, button {
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00ff00;
+}
+
+label {
   display: block;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+input, textarea {
   width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.75rem;
-  font-family: 'FalloutFont', monospace;
-  background-color: #111;
-  color: #00FF00;
-  border: 2px solid #00FF00;
+  padding: 8px;
+  margin-top: 5px;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: 'Pipboy', monospace;
+  resize: vertical;
 }
 
 button {
+  margin-top: 20px;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 10px 20px;
+  font-family: 'Pipboy', monospace;
   cursor: pointer;
-  background-color: #222;
-  font-size: 1rem;
 }
 
 button:hover {
-  background-color: #333;
+  background-color: #001a00;
 }
 
-#resumeDisplay {
-  background-color: #000;
-  padding: 1rem;
-  border: 2px dashed #00FF00;
-  margin-top: 2rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-hr {
-  border: none;
-  border-top: 1px dashed #00FF00;
-}
-
-.hidden {
-  display: none;
-}
-
-.note {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #88ff88;
-  text-align: center;
+.resume-output {
+  margin-top: 40px;
+  border-top: 2px dashed #00ff00;
+  padding-top: 20px;
 }
