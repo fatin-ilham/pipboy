@@ -1,54 +1,81 @@
+/* Import Pip-Boy font */
+@font-face {
+  font-family: 'PipBoy';
+  src: url('./Pip-Boy.otf') format('opentype');
+}
+
 body {
-  font-family: 'PipBoy', monospace;
-  background-color: #0f0f0f;
-  color: #33ff33;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
+  font-family: 'PipBoy', monospace;
+  background-image: url('./background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #00ff00;
+  text-shadow: 0 0 3px #00ff00;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+/* Container styling */
 .container {
-  max-width: 700px;
-  margin: auto;
-  border: 2px solid #33ff33;
+  background-color: rgba(0, 0, 0, 0.75); /* semi-transparent black overlay */
   padding: 2rem;
-  background-color: #000;
-  box-shadow: 0 0 20px #33ff33;
+  margin-top: 2rem;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 10px #00ff00;
 }
 
+/* Headings */
 h1, h2 {
-  text-align: center;
-  color: #33ff33;
-}
-
-label {
-  display: block;
+  color: #00ff00;
   margin-bottom: 1rem;
 }
 
-input, textarea {
-  width: 100%;
-  background: #0f0f0f;
-  border: 1px solid #33ff33;
-  color: #33ff33;
-  font-family: 'PipBoy', monospace;
+/* Input styling */
+input, textarea, select {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
   padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-button {
-  background: #33ff33;
-  color: #000;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-weight: bold;
-  cursor: pointer;
   font-family: 'PipBoy', monospace;
-  margin-top: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
+/* Button styling */
+button {
+  background-color: #000;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 0.5rem 1rem;
+  font-family: 'PipBoy', monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Result section */
 #resumeDisplay {
-  border: 1px dashed #33ff33;
-  padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1.5rem;
+  border: 2px solid #00ff00;
+  border-radius: 6px;
+  color: #00ff00;
+  font-family: 'PipBoy', monospace;
   white-space: pre-wrap;
+  text-shadow: 0 0 2px #00ff00;
 }
